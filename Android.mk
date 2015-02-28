@@ -6,8 +6,8 @@ LOCAL_MODULE_TAGS := optional
 # LOCAL_NO_CRT := true
 
 LOCAL_MODULE := libcapstone
-LOCAL_CAPSTONE_FILES := $(wildcard $(LOCAL_PATH)/*.c)
-CAPSTONE_ARM_FILES := $(wildcard $(LOCAL_PATH)/arch/ARM/*.c)
+LOCAL_CAPSTONE_FILES := $(wildcard /*.c) 
+CAPSTONE_ARM_FILES := $(wildcard /arch/ARM/*.c)
 LOCAL_SRC_FILES := $(LOCAL_CAPSTONE_FILES)
 LOCAL_SRC_FILES += $(CAPSTONE_ARM_FILES)
 
@@ -22,7 +22,7 @@ LOCAL_CFLAGS += -g3
 LOCAL_CFLAGS += -std=c99
 LOCAL_CFLAGS += -DANDROID
 LOCAL_CFLAGS += -fno-omit-frame-pointer
-
+LOCAL_C_INCLUDES := $(LOCAL_PATH)
 # gprof
 # LOCAL_CFLAGS += -fno-function-sections
 # LOCAL_CFLAGS += -fno-omit-frame-pointer
