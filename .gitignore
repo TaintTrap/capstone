@@ -58,7 +58,8 @@ tests/test_sparc
 tests/test_systemz
 tests/test_xcore
 tests/*.static
-
+.cproject
+.project
 # vim tmp file
 *.swp
 *~

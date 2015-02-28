@@ -8,7 +8,7 @@
 
 #include "SStream.h"
 #include "cs_priv.h"
-#include "inttypes.h"
+#include <inttypes.h>
 #include "utils.h"
 
 #ifdef _MSC_VER

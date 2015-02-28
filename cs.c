@@ -42,8 +42,12 @@ static void archs_enable(void)
 	if (initialized)
 		return;
 
+
 #ifdef CAPSTONE_HAS_ARM
+#warning capstone has arm: 
 	ARM_enable();
+#else 
+#error capstone doesnt have arm
 #endif
 #ifdef CAPSTONE_HAS_ARM64
 	AArch64_enable();
