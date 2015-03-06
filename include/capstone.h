@@ -15,6 +15,16 @@ extern "C" {
 
 #include "platform.h"
 
+#ifdef ANDROID
+#include <android/log.h>
+#define LOG_TAG "anemu"
+#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__))
+#define printf LOGI
+#endif
+#define lprintf(fd, ...) printf(__VA_ARGS__);
+
+
+
 #ifdef _MSC_VER
 #pragma warning(disable:4201)
 #pragma warning(disable:4100)
