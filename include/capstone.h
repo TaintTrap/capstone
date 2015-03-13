@@ -226,6 +226,7 @@ typedef struct cs_detail {
 	uint8_t groups[8]; // list of group this instruction belong to
 	uint8_t groups_count; // number of groups this insn belongs to
 
+	uint8_t hasShift;
 	// Architecture-specific instruction info
 	union {
 		cs_x86 x86;	// X86 architecture, including 16-bit, 32-bit & 64-bit mode
